@@ -1,5 +1,5 @@
 body{
-	font-family: 'Oswald', sans-serif;
+	font-family: 'Open Sans', sans-serif;
 }
 
 .header-wrapper {
@@ -9,7 +9,7 @@ body{
 	top: 0px;
 	left: 0px;
 	background-color: black;
-	border-bottom: 1px solid gray;
+	border-bottom: 3px solid gray;
 }
 .logo {
 	display: inline-block;
@@ -28,4 +28,14 @@ body{
 	margin: 0px;
 	vertical-align: bottom;
 	margin-left: 50px;
+}
+
+#side_menu {
+	display: inline-block;
+	position: fixed;
+	left: 0px;
+	top: 78px;
+	height: 100%;
+	width: 100px;
+	background-color: black;
 }
