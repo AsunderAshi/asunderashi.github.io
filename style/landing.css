@@ -38,4 +38,56 @@ body{
 	height: 100%;
 	width: 100px;
 	background-color: black;
+	border-right: 2px solid gray;
+}
+
+.menu-avatar {
+	width: 80px;
+	height: auto;
+	margin-left: 10px;
+	margin-top: 25px;
+	border-radius: 50px;
+}
+
+.about-me {
+	line-height: 30px;
+	font-weight: 600;
+	color: white;
+	text-decoration: none;
+	cursor: pointer;
+	text-align: center;
+}
+
+.about-me-wrapper {
+	width: 100%;
+	margin-top: 10px;
+	padding-left: 4px;
+	border-top: 2px solid white;
+	border-bottom: 2px solid white;
+}
+
+.about-me-page {
+	width: 80%;
+	margin: 0 auto;
+	border: 2px solid gray;
+	background-color: black;
+	padding: 10px 20px;
+}
+
+.main-wrapper {
+	margin-top: 75px;
+	margin-left: 100px;
+	padding-top: 50px;
+}
+
+.vk {
+
+}
+
+.fb {
+
+}
+
+.tg {
+
 }
