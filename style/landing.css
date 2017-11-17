@@ -35,6 +35,7 @@ html, body {
 	position: absolute;
 	width: 100%;
 	left: 0px;
+	padding-left: 100px;
 	background-color: black;
 }
 #side_menu {
@@ -203,6 +204,9 @@ html, body {
 }
 .psyduck {
 	width: 70%;
+}
+.footer-content {
+	border-top: 1px solid white;
 }
 .vk {
 
