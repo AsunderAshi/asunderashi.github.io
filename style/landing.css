@@ -255,6 +255,7 @@ html, body {
 	display: inline-block;
 	width: 20%;
 	margin-right: 5%;
+	vertical-align: top;
 }
 .col-md-4:last-of-type {
 	margin-right: 0%;
