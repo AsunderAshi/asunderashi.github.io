@@ -84,6 +84,7 @@ p {
 	border: 2px solid gray;
 	background-color: white;
 	padding: 10px 20px;
+	min-height: 600px;
 }
 
 .main-wrapper {
