@@ -45,7 +45,15 @@
 
 	<div class="main-wrapper" id="page_wrapper">
 		<div class="page">
-
+			<p class="page-header">Галерея</p>
+			<div class="thumbnail-wrapper">
+				<div class="thumbnail"><img src="img/asia-background.jpg" class="thumbnail-img"></div>
+				<div class="thumbnail"><img src="img/road-background.jpg" class="thumbnail-img"></div>
+				<div class="thumbnail"><img src="img/newyork-background.jpg" class="thumbnail-img"></div>
+				<div class="thumbnail"><img src="img/pier-background.jpg" class="thumbnail-img"></div>
+				<div class="thumbnail"><img src="img/mountains-background.jpg" class="thumbnail-img"></div>
+				<div class="thumbnail"><img src="img/city-background.jpg" class="thumbnail-img"></div>
+			</div>
 		</div>
 	</div>
 
@@ -87,3 +95,14 @@
 		</div>
 	</div>
 </body>
+<script>
+	document.body.onclick = function(e) {
+	    e = window.event ? event.srcElement: e.target;
+	    if(e.className && e.className.indexOf('thumbnail-img') != -1) {
+	    	var img = e.src;
+	    	var popup = document.createElement('div');
+	    	popup.className = 'img-popup';
+	    	
+	    }
+	}
+</script>

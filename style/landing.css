@@ -334,6 +334,30 @@ p {
 .menu-dropdown li:hover ul {
 	display: block;
 }
+.thumbnail-wrapper {
+	display: block;
+	margin-top: 50px;
+}
+.thumbnail {
+	width: 45%;
+	display: inline-block;
+	border: 1px solid gray;
+	max-height: 200px;
+	vertical-align: top;
+	margin-top: 5px;
+	background-color: #eeeeee;
+	padding: 5px;
+	overflow: hidden;
+	cursor: pointer;
+}
+.thumbnail:nth-of-type(2n - 1) {
+	margin-right: 5%;
+}
+.thumbnail img {
+	width: 100%;
+	height: auto;
+	max-height: 180px;
+}
 @media all and (max-width: 1210px) {
 	.introduction-wrapper {
 		display: block;
