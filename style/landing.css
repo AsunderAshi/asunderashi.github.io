@@ -2,7 +2,10 @@ html, body {
 	font-family: 'Open Sans', sans-serif;
 	height: 100%;
 }
-
+p {
+	word-break: normal;
+	hyphens: auto;
+}
 .header-wrapper {
 	width: 100%;
 	height: 75px;
@@ -274,4 +277,169 @@ html, body {
 }
 .urfu {
 	background-image: url(data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MDAiIGhlaWdodD0iMzgwIiB2aWV3Qm94PSIwIDAgMzAwLjAwMDAwMCAyODUuMDAwMDAwIj48ZyBmaWxsPSIjZmZmIj48cGF0aCBkPSJNMjQuMyAzMC40bC0xIDQuNCA0LjguNWM5LjUgMS4xIDE5LjMgOC41IDI2LjUgMTkuOCAyLjcgNC4zIDE3LjEgMjguOCA0Ni45IDc5LjkgOC4xIDE0IDE4LjMgMzEuMyAyMi41IDM4LjUgMTYuMiAyNy40IDE3LjUgMzYuMiA2LjkgNDYuNi02LjggNi42LTIxLjggMTEuOS0zMy45IDExLjktNS40IDAtMTYuNC0yLjMtMjIuNS00LjZsLTQtMS42LTIuNyAzLjNjLTEuNiAxLjgtMi44IDMuNy0yLjggNC4zIDAgMi45IDcuNSAxNS43IDExLjYgMTkuOCA2LjggNi45IDEyLjIgOS4yIDIxLjkgOS42IDE3LjIuOCAzMi40LTguMiA0NS43LTI3IDQuNy02LjcgMTMuMy0yMS4zIDIxLjMtMzYuMyAyLjYtNSA1LjgtMTAuOCA3LTEzIDEuMi0yLjIgMy45LTcuMSA1LjktMTAuOWwzLjYtNi45LTIuNi00LjZjLTEuNS0yLjUtNi42LTExLjQtMTEuNC0xOS42LTQuOC04LjMtMTktMzIuNS0zMS41LTUzLjktMTQuOC0yNS4zLTIyLjktNDAuMy0yMy4yLTQyLjctLjQtMi40IDAtNC41IDEuMi02LjIgMS45LTMgOS02LjcgMTIuNi02LjcgMi4yIDAgMi43LS42IDMuNi00LjVsMS00LjVIMjUuM2wtMSA0LjR6TTE5Ni42IDI4LjdjLS40IDEuNi0uOSAzLjYtMS4yIDQuNS0uNCAxLjUuMSAxLjggMi42IDEuOCAxMC43IDAgMjUuMiA2LjQgMjcuMyAxMmwxLjEgM2g5LjZsOS41LS4xIDIuNy0zLjljMy40LTQuOCAxMS43LTkuOCAxOC4xLTEwLjYgNS40LS44IDUuMy0uNiA2LjItNS43bC43LTMuN2gtNzZsLS42IDIuN3oiLz48L2c+PC9zdmc+);
+}
+.mobile {
+	display: none;
+}
+.menu-dropdown, #menu ul {
+	list-style: none;
+	border: 2px solid #ffffff;
+	border-radius: 5px;
+	background-color: black;
+	float: left;
+	margin-left: 25px;
+	margin-top: 19px;
+	display: none;
+	padding-left: 0px;
+}
+.menu-dropdown li {
+	float: left;
+	border: 1px solid #ffffff;
+	position: relative;
+}
+.menu-dropdown ul {
+	position: absolute;
+	top: 34px;
+	left: -2px;
+	width: 200px;
+	padding: 0;
+	display: none;
+}
+.menu-dropdown ul li {
+	float: none;
+	margin: 0;
+	padding: 0;
+	line-height: 30px;
+	background-color: black;
+	list-style: none;
+}
+.menu-dropdown a:link, .menu-dropdown a:visited {
+	display: block;
+	font-size: 18px;
+	font-weight: bold;
+	text-align: left;
+	text-decoration: none;
+	color: white;
+	padding: 5px;
+}
+.menu-dropdown li:hover {
+	background-color: #333333;
+	border: 1px solid white;
+}
+.menu-dropdown li:hover ul {
+	display: block;
+}
+@media all and (max-width: 1210px) {
+	.introduction-wrapper {
+		display: block;
+		width: 100%;
+	}
+	.name {
+		display: none;
+	}
+	.fio-wrapper.mobile, .name.mobile {
+		display: block;
+		text-align: center;
+	}
+	.about-me-avatar {
+		margin-left: auto;
+		margin-right: auto;
+		display: block;
+	}
+	.about-me-block {
+		float: none;
+		width: 100%;
+	}
+	.main-wrapper {
+		margin-left: 45px;
+	}
+	.col-md-4 {
+		width: 40% !important;
+		margin-right: 5%;
+	}
+}
+
+@media all and (max-width: 900px) {
+	#side_menu {
+		display: none;
+	}
+	#page_wrapper {
+		margin: 0 auto;
+		margin-top: 75px;
+		padding-left: 25px;
+		padding-right: 25px;
+		width: calc(100% - 50px);
+	}
+	.header-wrapper {
+		border-bottom: 1px solid white;
+	}
+	#footer {
+		padding-left: 0px;
+	}
+	.footer-content {
+		padding-left: 25px;
+	}
+	.col-md-4 {
+		width: 100% !important;
+		margin-right: 0%;
+	}
+	body {
+		margin: 0px;
+	}
+	.page {
+		width: calc(100% - 50px);
+		padding: 50px 25px;
+		margin: 0px;
+	}
+	.page-header {
+		margin-left: -25px;
+		padding-left: 25px;
+		width: calc(100% + 25px);
+	}
+	.footer-content p {
+		margin-bottom: 5px;
+	}
+	.site-title {
+		margin-left: 25px;
+	}
+	.logo {
+		display: none;
+	}
+	.menu-dropdown, #menu ul {
+		display: inline-block;
+	}
+}
+
+@media all and (max-width: 650px) {
+	.site-title {
+		margin-left: 10px;
+	}
+	.menu-dropdown a:link, .menu-dropdown a:visited {
+		font-size: 12px;
+	}
+	.menu-dropdown, #menu ul {
+		margin-left: 10px;
+	}
+	#page_wrapper{
+		padding-left: 10px;
+		padding-right: 10px;
+		width: calc(100% - 20px);
+	}
+	.page {
+		padding: 50px 15px;
+		width: calc(100% - 30px);
+	}
+	.page-header {
+		margin-left: -15px;
+		padding-left: 15px;
+		width: calc(100% + 15px);
+	}
+}
+@media all and (max-width: 475px) {
+	.site-title {
+		font-size: 18px;
+	}
+	.psyduck {
+		width: 100%;
+	}
 }
