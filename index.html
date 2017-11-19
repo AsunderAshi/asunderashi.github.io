@@ -10,8 +10,36 @@
 	<link rel="shortcut icon" href="img/favicon.ico" />
 </head>
 <body>
-	<div id="header"></div>
-	<div id="side_menu"></div>
+	<div id="header">
+		<div class="header-wrapper">
+			<div class="logo"></div>
+			<h1 class="site-title">Anton Shishkin's blog</h1>
+			<ul class="menu-dropdown">
+				<li><a href="#">МЕНЮ</a>
+				<ul>
+					<li><a href="index.html">Главная</a></li>
+					<li><a href="about-me.html">About me</a></li>
+					<li><a href="#">Галерея</a></li>
+				</ul>
+			</ul>
+		</div>
+	</div>
+	<div id="side_menu">
+		<img src="img/Шишкин Антон.jpg" class="menu-avatar"></img>
+		<div class='about-me-wrapper'>
+			<a href="about-me.html" class='about-me'>ABOUT ME</a>
+		</div>
+		<a href="index.html" class="menu-link">
+			<div class="menu-block">
+				<div class="home-svg"></div>
+				<p class="menu-nav-item">На главную</p>
+			</div>
+		</a>
+		<div class="menu-block">
+			<div class="gallery-svg"></div>
+			<p class="menu-nav-item">Галерея</p>
+		</div>
+	</div>
 
 	<div class="main-wrapper" id="page_wrapper">
 		<div class="page">
@@ -23,5 +51,31 @@
 		</div>
 	</div>
 	
-	<div id="footer"></div>
+	<div id="footer">
+		<div class="footer-content">
+			<div class="col-md-4">
+				<p class="block-header">Адрес университета</p>
+				<p>
+					г. Екатеринбург<br>
+					ул. Тургенева д. 4
+				</p>
+			</div>	
+			<div class="col-md-4">
+				<p class="block-header">Контактные данные</p>
+				<a href="tel:+79226019868" class="medium-text">+7(922)601-98-68</a>
+				<a href="mailto:shishkinanton14@gmail.com" class="medium-text">shishkinanton14@gmail.com</a>
+			</div>	
+			<div class="col-md-4">
+				<p class="block-header">Соц. сети</p>
+				<a href="https://vk.com/asundersc"><div class="footer-media footer-vk"></div></a>
+				<a href="https://www.facebook.com/AsunderSC"><div class="footer-media footer-fb"></div></a>
+				<a href="https://t.me/asunder"><div class="footer-media footer-tg"></div></a>
+			</div>	
+			<div class="col-md-4">
+				<p class="block-header">Университет</p>
+				<a href="https://urfu.ru/ru/"><div class="footer-media urfu"></div></a>
+				<a href="http://imkn.urfu.ru/#!path=llff_Lw"><div class="footer-media mtmh"></div></a>
+			</div>
+		</div>
+	</div>
 </body>
