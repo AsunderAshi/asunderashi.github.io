@@ -415,7 +415,10 @@ p {
 		margin-left: 10px;
 	}
 	.menu-dropdown a:link, .menu-dropdown a:visited {
-		font-size: 12px;
+		font-size: 14px;
+	}
+	.menu-dropdown ul {
+		top: 30px;
 	}
 	.menu-dropdown, #menu ul {
 		margin-left: 10px;
@@ -441,5 +444,12 @@ p {
 	}
 	.psyduck {
 		width: 100%;
+	}
+	.name.mobile {
+		font-size: 35px;
+		padding-left: 0px;
+	}
+	.avatar.about-me-avatar {
+		width: 80%;
 	}
 }
