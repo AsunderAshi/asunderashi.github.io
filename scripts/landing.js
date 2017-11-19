@@ -5,16 +5,16 @@ window.onload = function() {
 
 //Формат имени паршиала *id элемента для вставки*.html
 function render_paricles(partials) {
-	partials.forEach(function(partial) {
+	for(var i = 0; i < partials.length(); i++) {
 		var xhr= new XMLHttpRequest();
-		xhr.open('GET', partial, true);
+		xhr.open('GET', partials[i], true);
 		xhr.onreadystatechange= function() {
 		    if (this.readyState!==4) return;
 		    if (this.status!==200) return; 
-		    document.getElementById(partial.slice(0, -5)).innerHTML= this.responseText;
+		    document.getElementById(partials[i].slice(0, -5)).innerHTML= this.responseText;
 		};
-		xhr.send();	
-	})
+		xhr.send();
+	}
 }
 
 window.onscroll = function() {
