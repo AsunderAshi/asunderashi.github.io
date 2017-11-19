@@ -5,7 +5,7 @@ window.onload = function() {
 
 //Формат имени паршиала *id элемента для вставки*.html
 function render_paricles(partials) {
-	for(var i = 0; i < partials.length(); i++) {
+	for(var i = 0; i < partials.length; i++) {
 		var xhr= new XMLHttpRequest();
 		xhr.open('GET', partials[i], true);
 		xhr.onreadystatechange= function() {
