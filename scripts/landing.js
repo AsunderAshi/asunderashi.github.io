@@ -1,22 +1,3 @@
-// window.onload = function() {
-// 	var partials = ['header.html', 'footer.html', 'side_menu.html'];
-// 	render_paricles(partials);
-// }
-
-//Формат имени паршиала *id элемента для вставки*.html
-// function render_paricles(partials) {
-// 	for(var i = 0; i < partials.length; i++) {
-// 		var xhr= new XMLHttpRequest();
-// 		xhr.open('GET', partials[i], true);
-// 		xhr.onreadystatechange= function() {
-// 		    if (this.readyState!==4) return;
-// 		    if (this.status!==200) return; 
-// 		    document.getElementById(partials[i].slice(0, -5)).innerHTML= this.responseText;
-// 		};
-// 		xhr.send();
-// 	}
-// }
-
 window.onscroll = function() {
 	var scrolled = document.documentElement.scrollTop;
 	var menu_block = document.getElementById("side_menu");
