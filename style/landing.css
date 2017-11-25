@@ -439,6 +439,17 @@ p {
 	}
 }
 
+@media all and (max-width: 740px) {
+	.thumbnail {
+		width: calc(100% - 15px);
+		height: auto;
+		display: block;
+		margin-right: 0px !important;
+	}
+	.thumbnail img {
+		max-height: auto;
+	}
+}
 @media all and (max-width: 650px) {
 	.site-title {
 		margin-left: 10px;
