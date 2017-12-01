@@ -52,11 +52,15 @@ function show_lightbox(i) {
 	var lightbox = document.getElementById('lightbox_wrapper');
 	lightbox.style.display = 'block';
 	var current = document.getElementById('current');
+	current.style.display = 'none';
 	current.setAttribute('src', pic_src[i]);
-	document.getElementById('loading').style.display = 'none';
-	document.getElementById('next').setAttribute('src', pic_src[(i + 1) % 6]);
-	var prev_num = (i > 0) ? i - 1 : 5;
-	document.getElementById('prev').setAttribute('src', pic_src[prev_num]);
+	current.onload = function() {
+		document.getElementById('loading').style.display = 'none';
+		current.style.display = 'block';
+		document.getElementById('next').setAttribute('src', pic_src[(i + 1) % 6]);
+		var prev_num = (i > 0) ? i - 1 : 5;
+		document.getElementById('prev').setAttribute('src', pic_src[prev_num]);
+	}
 }
 
 function close_lighbox() {
