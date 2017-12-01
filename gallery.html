@@ -5,6 +5,7 @@
  	<meta charset="utf-8"> 	
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<script src="scripts/landing.js"></script>
+	<script src="scripts/gallery.js"></script>
 	<link rel="stylesheet" type="text/css" href="style/landing.css">
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,900" rel="stylesheet">
@@ -48,13 +49,47 @@
 		<div class="page">
 			<p class="page-header">Галерея</p>
 			<div class="thumbnail-wrapper">
-				<div class="thumbnail"><img src="img/asia-background.jpg" class="thumbnail-img" alt="asia"></div>
-				<div class="thumbnail"><img src="img/road-background.jpg" class="thumbnail-img" alt="road"></div>
-				<div class="thumbnail"><img src="img/newyork-background.jpg" class="thumbnail-img" alt="New-York"></div>
-				<div class="thumbnail"><img src="img/pier-background.jpg" class="thumbnail-img" alt="pier"></div>
-				<div class="thumbnail"><img src="img/mountains-background.jpg" class="thumbnail-img" alt="mountains"></div>
-				<div class="thumbnail"><img src="img/city-background.jpg" class="thumbnail-img" alt="city"></div>
+				<div class="thumbnail">
+					<img src="img/loading.gif" class="thumbnail-img" alt='loading...' onclick="show_lightbox(this.id)">
+				</div>
+				<div class="thumbnail">
+					<img src="img/loading.gif" class="thumbnail-img" alt='loading...' onclick="show_lightbox(this.id)">
+				</div>
+				<div class="thumbnail">
+					<img src="img/loading.gif" class="thumbnail-img" alt='loading...' onclick="show_lightbox(this.id)">
+				</div>
+				<div class="thumbnail">
+					<img src="img/loading.gif" class="thumbnail-img" alt='loading...' onclick="show_lightbox(this.id)">
+				</div>
+				<div class="thumbnail">
+					<img src="img/loading.gif" class="thumbnail-img" alt='loading...' onclick="show_lightbox(this.id)">
+				</div>
+				<div class="thumbnail">
+					<img src="img/loading.gif" class="thumbnail-img" alt='loading...' onclick="show_lightbox(this.id)">
+				</div>
 			</div>
+		</div>
+
+		<div class="lightbox" id="lightbox_wrapper">
+			<div class="cross" onclick="close_lighbox()">
+				<div class="cross-partial left"></div>
+				<div class="cross-partial right"></div>
+			</div>
+			<div class="lightbox-img" id='lightbox'>
+				<img id="loading" src="img/loading.gif" alt="Loading..." class="popup-pic"> 
+				<img id='prev' alt="Previous..." class="popup-pic">
+				<img id='current' alt="Current..." class="popup-pic">
+				<img id='next' alt="Next..." class="popup-pic">
+			</div>
+			<div class="controlls-block">
+				<div class="previous" onclick="move_slide('prev')"><</div>
+				<div class="next" onclick="move_slide('next')">></div>
+			</div>
+		</div>
+
+		<div id="help_window">
+			<p class="block-header">Help</p>
+			<p class="medium-text">Слайды можно переключать вперёд и назад с помощью <span class="bold-font">→</span> и <span class="bold-font">←</span> соответственно. Выставить новое изображение на задний фон можно нажатием на <span class="bold-font">пробел</span>. Чтобы закрыть данное окно - нажмите <span class="bold-font">ESC</span>.</p>
 		</div>
 	</div>
 
@@ -96,14 +131,3 @@
 		</div>
 	</div>
 </body>
-<script>
-	document.body.onclick = function(e) {
-	    e = window.event ? event.srcElement: e.target;
-	    if(e.className && e.className.indexOf('thumbnail-img') != -1) {
-	    	var img = e.src;
-	    	var popup = document.createElement('div');
-	    	popup.className = 'img-popup';
-	    	
-	    }
-	}
-</script>
