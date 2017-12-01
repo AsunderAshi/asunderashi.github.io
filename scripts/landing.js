@@ -45,27 +45,27 @@ window.onload = function() {
 }
 
 var pic_src = ['img/asia-background.jpg', 'img/road-background.jpg', 
-			   'img/newyork-background.jpg', 'img/pier-background.jpg', 
+			   'img/newyork-background.jpg', 'img/pier-background.jpg',
 			   'img/mountains-background.jpg', 'img/city-background.jpg'];
+
 
 function show_lightbox(i) {
 	var lightbox = document.getElementById('lightbox_wrapper');
 	lightbox.style.display = 'block';
 	var current = document.getElementById('current');
-	current.style.display = 'none';
 	current.setAttribute('src', pic_src[i]);
-	current.onload = function() {
-		document.getElementById('loading').style.display = 'none';
-		current.style.display = 'block';
-		document.getElementById('next').setAttribute('src', pic_src[(i + 1) % 6]);
-		var prev_num = (i > 0) ? i - 1 : 5;
-		document.getElementById('prev').setAttribute('src', pic_src[prev_num]);
-	}
+	current.addEventListener('load', preload(i));
+}
+
+function preload(i) {
+	document.getElementById('current').style.display = 'block';
+	document.getElementById('next').setAttribute('src', pic_src[(i + 1) % 6]);
+	var prev_num = (parseInt(i) > 0) ? i - 1 : 5;
+	document.getElementById('prev').setAttribute('src', pic_src[prev_num]);
 }
 
 function close_lighbox() {
 	document.getElementById('lightbox_wrapper').style.display = 'none';
-	document.getElementById('loading').style.display = 'block';
 	document.getElementById('current').setAttribute('src', '');
 	document.cookie = 'lastSlide=' + '-1';
 }
@@ -77,6 +77,8 @@ function move_slide(next_slide_id) {
 
 	var img = document.getElementById('current').src.match(/img.+$/)[0];
 	var index = pic_src.indexOf(img);
+
+	document.getElementById('next').removeEventListener('load', preload(0));
 
 	document.getElementById('next').setAttribute('src', pic_src[(index + 1) % 6]);
 	var prev_num = (index > 0) ? index - 1 : 5;

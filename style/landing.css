@@ -376,7 +376,14 @@ p {
 	z-index: 2;
 }
 #prev, #next {
-	display: none;
+	display: none !important;
+}
+#current {
+	background-image: url('../img/loading.gif');
+	background-size: 900px 500px;
+	max-width: 900px;
+	height: 500px;
+	width: 100%;
 }
 .popup-pic {
 	width: 100%;
